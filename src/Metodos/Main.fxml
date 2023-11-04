@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="550.0" prefWidth="752.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Metodos.MainController">
+    <children>
+          <Button fx:id="Salir" layoutX="682.0" layoutY="497.0" onAction="#handleSalir" text="Salir" />
+        <Label fx:id="label" layoutX="126" layoutY="120" minHeight="16" minWidth="69" />
+
+      <Label contentDisplay="CENTER" layoutX="297.0" layoutY="37.0" prefHeight="53.0" prefWidth="308.0" text="TIENDA DE PRODUCTOS" textOverrun="WORD_ELLIPSIS">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Label>
+             <TableView fx:id="Tabla" layoutX="275.0" layoutY="113.0" prefHeight="270.0" prefWidth="454.0">
+        <columns>
+          <TableColumn fx:id="idColumn" prefWidth="69.60003662109375" text="ID" />
+          <TableColumn fx:id="nombreColumn" prefWidth="84.0" text="NOMBRE" />
+            <TableColumn fx:id="fechaLoteColumn" prefWidth="101.5999755859375" text="FECHALOTE" />
+            <TableColumn fx:id="fechaVenceColumn" prefWidth="100.0" text="FECHAVENCE" />
+            <TableColumn fx:id="precioColumn" prefWidth="100.0" text="PRECIO" />
+        </columns>
+      </TableView>
+      <ComboBox fx:id="BoxBuscarPor" layoutX="404.0" layoutY="448.0" onAction="#handleBuscarPor" prefWidth="150.0" promptText="BuscarPor" />
+      <TextField fx:id="tfBuscarPor" layoutX="564.0" layoutY="448.0" />
+      <VBox layoutX="28.0" layoutY="129.0" prefHeight="238.0" prefWidth="230.0" spacing="15.0">
+         <children>
+<Button fx:id="btnMyMPromedio" mnemonicParsing="false" onAction="#handleMyMPromedio" text="Productos Mayor/Menor al Promedio" />
+<Button fx:id="btnMyMPrecio" mnemonicParsing="false" onAction="#handleMyMPrecio" text="Producto Mayor/Menor Precio" />
+<Button fx:id="btnPromedio" mnemonicParsing="false" onAction="#handlePromedio" text="Calcular Promedio" />
+<ComboBox fx:id="BoxMeses" prefHeight="26.0" prefWidth="121.0" promptText="Meses" />
+<Button fx:id="btnListarPorMes" mnemonicParsing="false" onAction="#handleListarPorMes" text="ListarPorMes" />
+ </children>
+      </VBox>
+<Button fx:id="btnActualizarLista" layoutX="542.0" layoutY="497.0" onAction="#handleActualizarLista">Actualizar Lista</Button>
+      <ImageView fitHeight="99.0" fitWidth="255.0" layoutX="33.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../../../Imágenes/1200px-U._Cooperativa_de_Colombia_logo.svg.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="btnEliminar" layoutX="465.0" layoutY="497.0" onAction="#handleEliminarProducto" text="Eliminar" />
+      <Button fx:id="btnAnterior" layoutX="33.0" layoutY="497.0" onAction="#handleAnterior" text="Anterior" />
+    </children>
+</AnchorPane>
